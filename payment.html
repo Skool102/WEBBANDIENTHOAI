@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1147679ae7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Triple T</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img alt="" src="images/logochinh.png" class="imageChange"/>
+        </div>
+        <div class="menu">
+           <li><a href="">IPHONE</a>
+                <ul class="sub-menu">
+                    <li><a href="">IPhone15 (Plus, Pro, Pro Max)</a></li>
+                    <li><a href="">IPhone14 (Plus, Pro, Pro Max)</a></li>
+                    <li><a href="">IPhone13 (Mini, Pro, Pro Max)</a></li>
+                    <li><a href="">IPhone12 (Mini, Pro, Pro Max)</a></li>
+                    <li><a href="">IPhone11</a></li>
+                </ul>
+
+           </li>
+           <li><a href="">SAMSUNG</a>
+                <ul class="sub-menu">
+                    <li><a href="">Galaxy Z (Màn hình gập)</a></li>
+                    <li><a href="">Galaxy A</a></li>
+                    <li><a href="">Galaxy S</a></li>
+                    <li><a href="">Galaxy M</a></li>
+                </ul>
+            </li>
+           <li><a href="">XIAOMI</a>
+                <ul class="sub-menu">
+                    <li><a href="">Xiaomi 13 Series</a></li>
+                    <li><a href="">Xiaomi 12 Series</a></li>
+                    <li><a href="">Xiaomi 11 Series</a></li>
+                    <li><a href="">Note 12 Series</a></li>
+                    <li><a href="">Note 11 Series</a></li>
+                    <li><a href="">Redmi 10 Series</a></li>
+                    <li><a href="">Poco Series</a></li>
+                </ul>
+            </li>
+           <li><a href="">OPPO</a>
+                <ul class="sub-menu">
+                    <li><a href="">A Series</a></li>
+                    <li><a href="">Find X Series</a></li>
+                    <li><a href="">Reno Series</a></li>
+                </ul>
+           </li>
+           <li><a href="">SALE</a></li>
+           <li><a href="">BỘ SƯU TẬP</a></li>
+           <li><a href="">THÔNG TIN</a></li>
+        </div>
+        <div class="others">
+           <li><input placeholder="Tìm kiếm" type="text"> <i class="fas fa-search"></i></li>
+           <li> <a class="fa fa-paw" href="" ></a></li>
+           <li> <a class="fa fa-user" href=""></a></li>
+           <li> <a class="fa fa-shopping-bag" href=""></a></li> 
+        </div>
+    </header>
+
+<!-------- payment ------>
+<section class="payment">
+    <div class = "container">
+        <div class="payment-top-wrap">
+            <div class="payment-top">
+                <div class="payment-top-delivery payment-top-item">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="payment-top-adress payment-top-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="payment-top-payment payment-top-item">
+                    <i class="fas fa-money-check-alt"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="payment-content row">
+            <div class ="payment-content-left">
+                <div class="payment-content-left-method-delivery">
+                    <p style="font-weight: bold;">Phương thức giao hàng</p>
+                    <div class="payment-content-left-method-delivery-item">
+                        <input type="radio">
+                        <label for="">Giao hàng chuyển phát nhanh</label>
+                    </div>
+                </div>
+                <div class="payment-content-left-method-payment">
+                    <p style="font-weight: bold;">Phương thức thanh toán</p>
+                    <p>Mọi giao dịch đều được bảo mật và mã hóa. Thông tin thẻ tín dụng sẽ không bao giờ được lưu lại</p>
+                    <div class="payment-content-left-method-payment-item">
+                        <input name="method-payment" type="radio">
+                        <label for="">Thanh toán bằng thẻ tín dụng</label>
+                    </div>
+                    <div class="payment-content-left-method-payment-item-img">
+                        <img src="images/visa.png" alt="">
+                    </div>
+                    <div class="payment-content-left-method-payment-item">
+                        <input checked name="method-payment"  type="radio">
+                        <label for="">Thanh toán bằng thẻ ATM</label>
+                    </div>
+                    <div class="payment-content-left-method-payment-item">
+                        <input name="method-payment" type="radio">
+                        <label for="">Thanh toán bằng Momo</label>
+                    </div>
+                    <div class="payment-content-left-method-payment-item">
+                        <input name="method-payment" type="radio">
+                        <label for="">Thanh toán khi giao hàng</label>
+                    </div>
+                </div>
+            </div>
+            <div class ="payment-content-right">
+                <div class = "payment-content-right-button">
+                    <input type="text" placeholder="Mã giảm giá/Quà tặng">
+                    <button><i class="fas fa-check"></i></button>
+                </div>
+                <div class = "payment-content-right-button">
+                    <input type="text" placeholder="Mã cộng tác viên">
+                    <button><i class="fas fa-check"></i></button>
+                </div>
+                <div class = "payment-content-right-mnv">
+                    <select name ="" id="">
+                        <option value="">Chọn mã nhân viên thân thiết</option>
+                        <option value="">A345</option>
+                        <option value="">B456</option>
+                        <option value="">C567</option>
+                        <option value="">D678</option>
+                        <option value="">E789</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="payment-content-right-payment">
+            <button>TIẾP TỤC THANH TOÁN</button>
+        </div>
+    </div>
+</section>
+<!----Footer-->
+
+    <selection class="app-container">
+        <p>Tải ứng dụng Triple T</p>
+        <div class="app-google">
+            <img src="images/appstore.png">
+            <img src="images/google.png">
+        </div>
+        <p>Nhận bản tin Triple T</p>
+        <input type="text" placeholder="Nhập email của bạn ....">
+    </selection>
+    <div class="footer-top">
+        <li><a href=""><img src="images/dathongbao.png"></a></li>
+        <li><a href=""></a>Liên hệ</li>
+        <li><a href=""></a>Tuyển dụng</li>
+        <li><a href=""></a>Giới thiệu</li>
+        <li>
+            <a href="" class="fab fa-facebook-f"></a>
+            <a href="" class="fab fa-twitter"></a>
+            <a href="" class="fab fa-youtube"></a>
+        </li>
+    </div>
+
+   <div class="footer-center">
+    <p>Công ty TNHH Thương Mại và Dịch Vụ Kỹ Thuật DIỆU PHÚC - GPĐKKD: 0316172372 cấp tại Sở KH & ĐT TP. HCM.<br>
+        Địa chỉ văn phòng: 350-352 Võ Văn Kiệt, Phường Cô Giang, Quận 1, Thành phố Hồ Chí Minh, Việt Nam.<br>
+        Điện thoại: <b>028.7108.9666</b>
+    </p>
+   </div>
+
+    <div class="footer-bottom">
+        ©Triple T All rights reserved
+    </div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1147679ae7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Triple T</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img alt="" src="images/logochinh.png" class="imageChange"/>
+        </div>
+        <div class="menu">
+           <li><a href="">IPHONE</a>
+                <ul class="sub-menu">
+                    <li><a href="">IPhone15 (Plus, Pro, Pro Max)</a></li>
+                    <li><a href="">IPhone14 (Plus, Pro, Pro Max)</a></li>
+                    <li><a href="">IPhone13 (Mini, Pro, Pro Max)</a></li>
+                    <li><a href="">IPhone12 (Mini, Pro, Pro Max)</a></li>
+                    <li><a href="">IPhone11 (128GB, 64GB)</a></li>
+                </ul>
+
+           </li>
+           <li><a href="">SAMSUNG</a>
+                <ul class="sub-menu">
+                    <li><a href="">Galaxy Z (Màn hình gập)</a></li>
+                    <li><a href="">Galaxy A</a></li>
+                    <li><a href="">Galaxy S</a></li>
+                    <li><a href="">Galaxy M</a></li>
+                </ul>
+           </li>
+           <li><a href="">XIAOMI</a>
+                <ul class="sub-menu">
+                    <li><a href="">Xiaomi 13 Series</a></li>
+                    <li><a href="">Xiaomi 12 Series</a></li>
+                    <li><a href="">Xiaomi 11 Series</a></li>
+                    <li><a href="">Note 12 Series</a></li>
+                    <li><a href="">Note 11 Series</a></li>
+                    <li><a href="">Redmi 10 Series</a></li>
+                    <li><a href="">Poco Series</a></li>
+                </ul>
+            </li>
+           <li><a href="">OPPO</a>
+                <ul class="sub-menu">
+                    <li><a href="">A Series</a></li>
+                    <li><a href="">Find X Series</a></li>
+                    <li><a href="">Reno Series</a></li>
+                </ul>
+            </li>
+           <li><a href="">SALE</a></li>
+           <li><a href="">BỘ SƯU TẬP</a></li>
+           <li><a href="">THÔNG TIN</a></li>
+        </div>
+        <div class="others">
+           <li><input placeholder="Tìm kiếm" type="text"> <i class="fas fa-search"></i></li>
+           <li> <a class="fa fa-paw" href="" ></a></li>
+           <li> <a class="fa fa-user" href=""></a></li>
+           <li> <a class="fa fa-shopping-bag" href=""></a></li> 
+        </div>
+    </header>
+
+    <section id="Slider">
+
+        <div class="aspect-ratio-169">
+            <img src="images/slide1.jpg">
+            <img src="images/slide2.png">
+            <img src="images/slide3.png">
+            <img src="images/slide4.png">
+            <img src="images/slide5.png">
+        </div>
+
+        <div class="dot-container">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+
+    </section>
+
+
+
+    <selection class="app-container">
+        <p>Tải ứng dụng Triple T</p>
+        <div class="app-google">
+            <img src="images/appstore.png">
+            <img src="images/google.png">
+        </div>
+        <p>Nhận bản tin Triple T</p>
+        <input type="text" placeholder="Nhập email của bạn ....">
+    </selection>
+
+    <div class="footer-top">
+        <li><a href=""><img src="images/dathongbao.png"></a></li>
+        <li><a href=""></a>Liên hệ</li>
+        <li><a href=""></a>Tuyển dụng</li>
+        <li><a href=""></a>Giới thiệu</li>
+        <li>
+            <a href="" class="fab fa-facebook-f"></a>
+            <a href="" class="fab fa-twitter"></a>
+            <a href="" class="fab fa-youtube"></a>
+        </li>
+    </div>
+
+   <div class="footer-center">
+    <p>Công ty TNHH Thương Mại và Dịch Vụ Kỹ Thuật DIỆU PHÚC - GPĐKKD: 0316172372 cấp tại Sở KH & ĐT TP. HCM.<br>
+        Địa chỉ văn phòng: 350-352 Võ Văn Kiệt, Phường Cô Giang, Quận 1, Thành phố Hồ Chí Minh, Việt Nam.<br>
+        Điện thoại: <b>028.7108.9666</b>
+    </p>
+   </div>
+
+    <div class="footer-bottom">
+        ©Triple T All rights reserved
+    </div>
+
+</body>
+<script>
+    const header = document.querySelector("header")
+    window.addEventListener("scroll",function(){
+        x = window.pageXOffset
+        if(x > 0){
+            header.classList.add("sticky")
+        }
+        else{
+            header.classList.remove("sticky")
+        }
+    })
+
+
+    const imgPosition = document.querySelectorAll(".aspect-ratio-169 img")
+    const imgContainer = document.querySelector('.aspect-ratio-169')
+    const dotItem = document.querySelectorAll(".dot")
+    let imgNumber = imgPosition.length
+    let index = 0
+    // console.log(imgPosition)
+        imgPosition.forEach(function(image,index){
+            image.style.left = index*100 + "%"
+            dotItem[index].addEventListener("click",function(){
+                slider(index)
+               })
+            })
+        function imgSlide (){
+            index++;
+                console.log(index)
+                if(index >= imgNumber) {index = 0}
+                slider(index)
+        }
+        
+        function slider (index) {
+            imgContainer.style.left = "-" + index*100 + "%"
+            const dotActive = document.querySelector('.active')
+            dotActive.classList.remove("active")
+            dotItem[index].classList.add("active")
+        }
+
+        setInterval(imgSlide,5000)
+
+
+</script>
+</html>
